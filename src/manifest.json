@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Okta Token Grabber",
+    "version": "1.0",
+    "description": "Grabs your okta token from local storage and copies it to clipboard.",
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["contentScript.js"]
+        }
+    ]
+}
